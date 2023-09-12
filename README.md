@@ -8,7 +8,7 @@ https://github.com/devsahm/multitenancy-docker
 ```
 
 ### Build and Start the Project with Docker
-
+Make sure you have started your docker on your local machine
 ```
 docker-compose up -d --build
 ```

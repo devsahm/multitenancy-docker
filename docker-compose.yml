@@ -1,4 +1,5 @@
-version: '3.8'
+version: '3.9'
+
 services:
   main:
     container_name: Propel
@@ -10,10 +11,11 @@ services:
       - .:/var/www/html
     ports:
       - 8000:8000
-
+    networks:
+        - app-network
 
   mysql:
-        image: mysql:8.0.27
+        image: mysql:5.7.22
         container_name: mysql
         ports:
             - 3306:3306
@@ -25,7 +27,9 @@ services:
             MYSQL_USER: "${DB_USERNAME}"
             MYSQL_PASSWORD: "${DB_PASSWORD}"
             MYSQL_ROOT_PASSWORD: "${DB_PASSWORD}"
+        networks:
+             - app-network
 
-volumes:
-  db:
-    driver: local
+networks:
+  app-network:
+    driver: bridge
