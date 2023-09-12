@@ -4,7 +4,7 @@ This project uses Laravel [Tenancy for Laravel](https://tenancyforlaravel.com/) 
 
 ### Clone the repo
 ```
-git clone 
+https://github.com/devsahm/multitenancy-docker
 ```
 
 ### Build and Start the Project with Docker
